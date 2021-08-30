@@ -14,6 +14,16 @@ from functionforDownloadButtons import download_button
 st.set_page_config(page_title="📊 CSV Wrangler", layout="wide")
 st.title("📊 CSV Wrangler")
 
+with st.beta_expander("ℹ️ - To-do (suggested by Charly)", expanded=False):
+    st.write(
+        """
+    
+-   Add filtering ability from dropdowns
+-   Improve export to CSV
+
+	    """
+    )
+
 c29, c30, c31 = st.columns([1, 6, 1])
 
 with c30:

@@ -14,7 +14,7 @@ from functionforDownloadButtons import download_button
 st.set_page_config(page_title="📊 CSV Wrangler", layout="wide")
 st.title("📊 CSV Wrangler")
 
-with st.beta_expander("ℹ️ - To-do (suggested by Charly)", expanded=False):
+with st.expander("ℹ️ - To-do (suggested by Charly)", expanded=False):
     st.write(
         """
     

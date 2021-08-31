@@ -59,7 +59,7 @@ from st_aggrid import GridUpdateMode, DataReturnMode
 
 gb = GridOptionsBuilder.from_dataframe(shows)
 # enables pivoting on all columns, however i'd need to change ag grid to allow export of pivoted/grouped data, however it select/filters groups
-gb.configure_default_column(fit_columns_on_grid_load=False, enablePivot=True, enableValue=True, enableRowGroup=True)
+gb.configure_default_column(enablePivot=True, enableValue=True, enableRowGroup=True)
 gb.configure_selection(selection_mode="multiple", use_checkbox=True)
 gb.configure_side_bar()  # side_bar is clearly a typo :) should by sidebar
 gridOptions = gb.build()
@@ -77,7 +77,7 @@ response = AgGrid(
     enable_enterprise_modules=True,
     update_mode=GridUpdateMode.MODEL_CHANGED,
     data_return_mode=DataReturnMode.FILTERED_AND_SORTED,
-    fit_columns_on_grid_load=True,
+    fit_columns_on_grid_load=False,
 )
 
 df = pd.DataFrame(response["selected_rows"])

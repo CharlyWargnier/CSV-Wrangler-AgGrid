@@ -22,7 +22,7 @@ st.caption(
 )
 
 
-with st.beta_expander("ToDo's", expanded=False):
+with st.expander("ToDo's", expanded=False):
     st.markdown(
         """
 -   **Remove 200 MB limit and test with larger CSVs**. Currently, the content is embedded in base64 format, so we may end up with a large HTML file for the browser to render
@@ -36,14 +36,14 @@ with st.beta_expander("ToDo's", expanded=False):
     st.text("")
 
 
-c29, c30, c31 = st.beta_columns([1, 6, 1])
+c29, c30, c31 = st.columns([1, 6, 1])
 
 with c30:
 
     uploaded_file = st.file_uploader("", key="1")
 
     if uploaded_file is not None:
-        file_container = st.beta_expander("Check your uploaded .csv")
+        file_container = st.expander("Check your uploaded .csv")
         shows = pd.read_csv(uploaded_file)
         uploaded_file.seek(0)
         file_container.write(shows)
@@ -91,7 +91,7 @@ st.table(df)
 
 st.text("")
 
-c29, c30, c31 = st.beta_columns([1, 1, 2])
+c29, c30, c31 = st.columns([1, 1, 2])
 
 with c29:
 

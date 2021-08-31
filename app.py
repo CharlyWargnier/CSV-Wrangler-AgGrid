@@ -7,12 +7,13 @@ from st_aggrid.grid_options_builder import GridOptionsBuilder
 from st_aggrid.shared import JsCode
 
 ###################################
+
 from functionforDownloadButtons import download_button
 
 ###################################
 
 def _max_width_():
-    max_width_str = f"max-width: 800px;"
+    max_width_str = f"max-width: 1800px;"
     st.markdown(
         f"""
     <style>

@@ -11,9 +11,7 @@ from functionforDownloadButtons import download_button
 
 ###################################
 
-# st.set_page_config(page_title="📊 CSV Wrangler", layout="wide")
 st.set_page_config(page_title="📊 CSV Wrangler")
-
 
 st.title("🔀 CSV Wrangler")
 
@@ -79,7 +77,7 @@ response = AgGrid(
     enable_enterprise_modules=True,
     update_mode=GridUpdateMode.MODEL_CHANGED,
     data_return_mode=DataReturnMode.FILTERED_AND_SORTED,
-    fit_columns_on_grid_load=True,
+    fit_columns_on_grid_load=False,
 )
 
 df = pd.DataFrame(response["selected_rows"])

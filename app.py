@@ -60,7 +60,7 @@ c29, c30, c31 = st.beta_columns([1, 6, 1])
 
 with c30:
 
-    uploaded_file = st.file_uploader("", key="1", help="to activate 'wide mode', go to the hamburger menu > Settings > turn on 'wide mode'")
+    uploaded_file = st.file_uploader("", key="1", help="To activate 'wide mode', go to the hamburger menu > Settings > turn on 'wide mode'")
 
     if uploaded_file is not None:
         file_container = st.beta_expander("Check your uploaded .csv")

@@ -47,6 +47,7 @@ st.caption(
 with st.expander("ToDo's", expanded=False):
     st.markdown(
         """
+-   Add pandas.json_normalize() - https://streamlit.slack.com/archives/D02CQ5Z5GHG/p1633102204005500
 -   **Remove 200 MB limit and test with larger CSVs**. Currently, the content is embedded in base64 format, so we may end up with a large HTML file for the browser to render
 -   **Add an encoding selector** (to cater for a wider array of encoding types)
 -   **Expand accepted file types** (currently only .csv can be imported. Could expand to .xlsx, .txt & more)

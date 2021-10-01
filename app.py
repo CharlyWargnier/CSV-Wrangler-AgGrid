@@ -27,7 +27,10 @@ def _max_width_():
 
 st.set_page_config(page_title="📊 CSV Wrangler")
 
-st.title("🔀 CSV Wrangler")
+# st.image("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/balloon_1f388.png", width=100)
+st.image("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/scissors_2702-fe0f.png", width=100)
+
+st.title("CSV Wrangler")
 
 st.caption(
     "PRD : TBC | Streamlit Ag-Grid from Pablo Fonseca: https://pypi.org/project/streamlit-aggrid/"
@@ -41,8 +44,7 @@ st.caption(
 # )
 
 
-
-with st.beta_expander("ToDo's", expanded=False):
+with st.expander("ToDo's", expanded=False):
     st.markdown(
         """
 -   **Remove 200 MB limit and test with larger CSVs**. Currently, the content is embedded in base64 format, so we may end up with a large HTML file for the browser to render
@@ -56,14 +58,14 @@ with st.beta_expander("ToDo's", expanded=False):
     st.text("")
 
 
-c29, c30, c31 = st.beta_columns([1, 6, 1])
+c29, c30, c31 = st.columns([1, 6, 1])
 
 with c30:
 
     uploaded_file = st.file_uploader("", key="1", help="To activate 'wide mode', go to the hamburger menu > Settings > turn on 'wide mode'")
 
     if uploaded_file is not None:
-        file_container = st.beta_expander("Check your uploaded .csv")
+        file_container = st.expander("Check your uploaded .csv")
         shows = pd.read_csv(uploaded_file)
         uploaded_file.seek(0)
         file_container.write(shows)
@@ -111,7 +113,7 @@ st.table(df)
 
 st.text("")
 
-c29, c30, c31 = st.beta_columns([1, 1, 2])
+c29, c30, c31 = st.columns([1, 1, 2])
 
 with c29:
 
